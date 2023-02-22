@@ -1,21 +1,20 @@
 #include "main.h"
-
 /**
- * prints_last_digit - prints the last digit  of a number
- * @n: the number to extract the last digit from
+ * print_last_digit - chack main
+ * @r: inpu an integer
+ * Description: This prints the last digit of a number
  *
- * Return: The value of the last digit
+ * Return: prints the last digit of number
+ *
  */
-int print_last_digit(int n)
+int print_last_digit(int r)
 {
-	int last_digit;
+	int k;
 
-	if (n < 0)
-		n = -n;
-
-	last_digit = n % 10;
-
-	_putchar(last_digit + '0');
-	return (last_digit);
+	if (r < 0)
+		k = -1 * (r % 10);
+	else
+		k = r % 10;
+	_putchar((k % 10) + '0');
+	return (k % 10);
 }
-
