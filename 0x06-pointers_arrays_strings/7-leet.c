@@ -1,28 +1,25 @@
 #include "main.h"
 /**
- * cap_string - capitalizes all words of a string
- * @s: input string.
- * Return: the pointer to dest.
+ * leet - capitalizes all words of a string
+ * @n: input string.
+ * Return: the value of n
  */
 
-char *cap_string(char *s)
+char *leet(char *)
 {
-	char *p = str;
-	char *leet_chars = "aAeEoOtTlL";
-	char *leet_replacements = "433771";
+	int i, j;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	while (*p != '\0')
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		for (int i = 0; i < 10; i += 2)
+		for (j = 0; j < 10; j++)
 		{
-			if (*p == leet_chars[i] || *p == leet_chars[i + 1])
+			if (n[i] == s1[j])
 			{
-				*p = leet_replacements[i / 2];
-				break;
+				n[i] = s2[j];
 			}
-
 		}
-		p++;
 	}
-	return (str);
+	return (n);
 }
